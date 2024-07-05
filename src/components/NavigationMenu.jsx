@@ -9,10 +9,14 @@ const NavigationMenu = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleNavigate = () => {
+    navigate('/')
+    setShow(false)
+  }
 
   return (
     <>
-      <Button variant='dark' onClick={handleShow}>
+      <Button className='position-absolute start-0 top-0' variant='info' onClick={handleShow}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -30,10 +34,10 @@ const NavigationMenu = () => {
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Button onClick={() => navigate('/')}>
+          <Button  onClick={handleNavigate}>
             Torna alla Home
           </Button>
         </Offcanvas.Body>

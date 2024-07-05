@@ -48,8 +48,12 @@
   font-size: 3em;
  }
 
+ #temperature {
+  font-size: 8em;
+ }
+
  #currentDay {
-  font-size: 15em;
+  font-size: 2em;
  }
 
  .city{
@@ -61,8 +65,7 @@
   }
  }
 
- .mainTitle {
-  position: absolute;
-  top: 0;
-  right: 5px;
+ #mainTitle {
+  font-weight: 500;
+  font-size: 8em;
  }

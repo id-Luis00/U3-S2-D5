@@ -32,28 +32,29 @@ const Home = () => {
 
 
     return (
-        <Container fluid>
-            <h1 className="mainTitle">Meteo.Luisito</h1>
-            <Form onSubmit={handleSubmit} className="d-flex mb-3">
+        <Container fluid style={{backgroundImage: `url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1719705600&semt=ais_user')`, backgroundSize: 'cover', height: '100vh'}}>
+            <h1 id="mainTitle" className="text-center text-light">Meteo.Luisito</h1>
+            <Form onSubmit={handleSubmit} className=" mb-3 mt-5 d-flex justify-content-center gap-3">
                 <FormControl
                     type="text"
                     placeholder="inserire una località"
+                    className="w-25"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <Button variant="success" > Cerca </Button>
+                <Button variant="info" > Cerca </Button>
 
             </Form>
 
 
 
             <Container className='p-2 d-flex align-items-center gap-3 mb-2' >
-                <ListGroup className="w-100">
+                <ListGroup className="w-50 mx-auto">
                     {dati.map((dato, index) =>
 
 
-                        <ListGroup.Item className="w-100 city d-flex align-items-center gap-3" key={index} onClick={() => navigate('/details', { state: { lat: dato.lat, lon: dato.lon } })}>
-                            <h4>{dato.name}</h4> <p>{dato.country}</p>
+                        <ListGroup.Item className="city d-flex align-items-center gap-3" key={index} onClick={() => navigate('/details', { state: { lat: dato.lat, lon: dato.lon } })}>
+                            <h4>{dato.name}</h4> <p className="m-0">{dato.country} </p> <strong className="ms-auto">{dato.state}</strong>
                         </ListGroup.Item>
 
                     )}
