@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -40,3 +40,29 @@
 .read-the-docs {
   color: #888;
 }
+ */
+
+
+ #currentPlace {
+  font-weight: 500;
+  font-size: 3em;
+ }
+
+ #currentDay {
+  font-size: 15em;
+ }
+
+ .city{
+  &:hover {
+    transform: scale(1.05);
+    background-color: paleturquoise;
+    cursor: pointer;
+    transition: all .5s;
+  }
+ }
+
+ .mainTitle {
+  position: absolute;
+  top: 0;
+  right: 5px;
+ }
