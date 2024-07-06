@@ -41,12 +41,24 @@
   color: #888;
 }
  */
+ 
+ @keyframes opacityIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+ }
 
 
- #currentPlace {
+ #details_city {
   font-weight: 500;
   font-size: 3em;
+
+  animation: testOpa 1s;
  }
+
 
  #temperature {
   font-size: 8em;
@@ -68,4 +80,29 @@
  #mainTitle {
   font-weight: 500;
   font-size: 8em;
+ }
+
+ body {
+  background-color: #33495F;
+  p {
+    animation: testOpa 2s;
+  }
+ }
+
+ #i-main {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+
+ .weatherGif {
+  background-image: url('./assets/weather.gif') ;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -100px;
+  z-index: -1;
+  height: 473.9px;
  }

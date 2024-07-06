@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 
+
 const DetailsWeather = () => {
     const location = useLocation();
     const { lat, lon } = location.state;
@@ -66,8 +67,9 @@ const DetailsWeather = () => {
     }
 
     return (
-        <Container fluid className='text-center'>
-            <h1 id='currentPlace'>{details.name}</h1>
+        <Container fluid className='text-center weatherGif'>
+        
+            <h1 id='details_city'>{details.name}</h1>
             <p id='currentDay'>{day}  {month}</p>
             <p id='temperature'>{((details.main.temp) - 273.15).toFixed(1)}<span className='text-dark'>°c</span></p> 
             <p>Condizioni Meteo: {details.weather[0].description}</p>
