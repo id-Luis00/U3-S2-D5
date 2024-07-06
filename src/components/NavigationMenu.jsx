@@ -16,7 +16,7 @@ const NavigationMenu = () => {
 
   return (
     <>
-      <Button className='position-absolute start-0 top-0' variant='trasparent' onClick={handleShow}>
+      <Button id='navBtn'  variant='trasparent' onClick={handleShow}>
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="bi bi-list" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
         </svg>
@@ -27,7 +27,7 @@ const NavigationMenu = () => {
           <Offcanvas.Title className='text-light'>Impostazioni</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Button onClick={handleNavigate}>
+          <Button variant='trasparent' className='fs-2 text-light' onClick={handleNavigate}>
             Torna alla Home
           </Button>
         </Offcanvas.Body>

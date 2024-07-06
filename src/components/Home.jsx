@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Alert, Button, Container, Form, FormControl, ListGroup } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 
@@ -7,20 +7,20 @@ import { useNavigate } from "react-router-dom"
 
 const Home = () => {
 
-    /*     style={{backgroundImage: `url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1719705600&semt=ais_user')`, backgroundSize: 'cover', height: '100vh'}}
-     */
     const navigate = useNavigate()
-
     const APIkey = 'fe23de65622856b0b1333df3275a27fa'
-
     const [searchQuery, setSearchQuery] = useState('')
     const [dati, setDati] = useState([])
+
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
         fetchPosition()
     }
+
+
 
     const fetchPosition = async () => {
 
@@ -34,7 +34,7 @@ const Home = () => {
 
 
     return (
-        <Container fluid className="">
+        <Container fluid >
             <Container fluid className="weatherGif">
             </Container>
 
@@ -44,27 +44,35 @@ const Home = () => {
                     <FormControl
                         type="text"
                         placeholder="inserire una località"
-                        className="w-25"
+                        className="w-75"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                     />
-                    <Button variant="info" > Cerca </Button>
-
+                    <Button variant="trasparent" type="submit" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </Button>
                 </Form>
 
-
-
-                <Container className='p-2 d-flex align-items-center gap-3 mb-2' >
-                    <ListGroup className="w-50 mx-auto">
+                <Container className='p-2 mb-2' >
+                    <ListGroup>
                         {dati.map((dato, index) =>
 
 
-                            <ListGroup.Item className="city d-flex align-items-center gap-3" key={index} onClick={() => navigate('/details', { state: { lat: dato.lat, lon: dato.lon } })}>
-                                <h4>{dato.name}</h4> <p className="m-0">{dato.country} </p> <strong className="ms-auto">{dato.state}</strong>
+                            <ListGroup.Item
+                                className="city d-flex align-items-center gap-3"
+                                key={index}
+                                onClick={() => navigate('/details', { state: { lat: dato.lat, lon: dato.lon } })}
+                            >
+                                <h4>{dato.name}</h4>
+                                <p className="m-0">{dato.country} </p>
+                                <strong className="ms-auto">{dato.state}</strong>
                             </ListGroup.Item>
 
                         )}
                     </ListGroup>
+
                 </Container>
             </div>
 

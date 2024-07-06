@@ -41,34 +41,35 @@
   color: #888;
 }
  */
- 
- @keyframes opacityIn {
+
+@keyframes opacityIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
- }
+}
 
 
- #details_city {
+#details_city {
   font-weight: 500;
   font-size: 3em;
 
   animation: testOpa 1s;
- }
+}
 
 
- #temperature {
+#temperature {
   font-size: 8em;
- }
+}
 
- #currentDay {
+#currentDay {
   font-size: 2em;
- }
+}
 
- .city{
+.city {
 
   background-color: rgba(255, 255, 255, 0);
   color: white;
@@ -81,44 +82,112 @@
     cursor: pointer;
     transition: all .5s;
   }
- }
+}
 
- #mainTitle {
-  font-weight: 500;
-  font-size: 8em;
- }
 
- body {
+
+body {
   background-color: #33495F;
+
   p {
     animation: testOpa 2s;
   }
-  
- }
 
- #i-main {
+  
+}
+
+#navBtn {
+  position: fixed;
+}
+
+#i-main {
   position: absolute;
-  top: 70%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
 
- }
+  #mainTitle {
+    font-weight: 500;
+    font-size: 6em;
 
- .weatherGif {
-  background-image: url('./assets/weather.gif') ;
+
+  }
+
+  input[type=text] {
+
+    font-size: 1.3em;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+}
+
+.weatherGif {
+  background-image: url('./assets/weather.gif');
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  top: -100px;
+  top: -65px;
   z-index: -1;
   height: 473.9px;
- }
+}
 
- .offcanvas-body {
+.list-group-item {
+
+  animation: opacityIn 1.75s ;
+
+}
+
+/* media per dispositivi mobili */
+
+@media screen and (max-width: 575px) {
+
+  #i-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    #mainTitle {
+      font-weight: 500;
+      font-size: 3em;
+    }
+
+
+  }
+
+  .weatherGif {
+    background-image: url('./assets/weather.gif');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -65px;
+    z-index: -1;
+    height: 473.9px;
+  }
+
+}
+
+
+
+
+
+
+
+
+.offcanvas-body {
   background-color: #33495F;
- }
+}
 
- .offcanvas-header {
+.offcanvas-header {
   background-color: #33495fea;
- }
+}
