@@ -67,11 +67,11 @@ const DetailsWeather = () => {
     }
 
     return (
-        <Container fluid className='text-center weatherGif'>
+        <Container fluid className='text-center text-light'>
         
             <h1 id='details_city'>{details.name}</h1>
             <p id='currentDay'>{day}  {month}</p>
-            <p id='temperature'>{((details.main.temp) - 273.15).toFixed(1)}<span className='text-dark'>°c</span></p> 
+            <p id='temperature'>{((details.main.temp) - 273.15).toFixed(1)}°c</p> 
             <p>Condizioni Meteo: {details.weather[0].description}</p>
             <p>Latitudine: {details.coord.lat}</p>
             <p>Longitudine: {details.coord.lon}</p>

@@ -67,9 +67,8 @@ const Home = () => {
                             >
                                 <h4>{dato.name}</h4>
                                 <p className="m-0">{dato.country} </p>
-                                <strong className="ms-auto">{dato.state}</strong>
+                                <strong className="ms-auto">{dato.state ? dato.state : 'N/S'}</strong>
                             </ListGroup.Item>
-
                         )}
                     </ListGroup>
 
