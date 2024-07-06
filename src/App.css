@@ -69,9 +69,15 @@
  }
 
  .city{
+
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: none;
+
   &:hover {
     transform: scale(1.05);
-    background-color: paleturquoise;
+    background-color: rgba(175, 238, 238, 0.745);
+    color: rgb(12, 72, 72);
     cursor: pointer;
     transition: all .5s;
   }
@@ -87,6 +93,7 @@
   p {
     animation: testOpa 2s;
   }
+  
  }
 
  #i-main {
@@ -94,6 +101,7 @@
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
+
  }
 
  .weatherGif {
@@ -105,4 +113,12 @@
   top: -100px;
   z-index: -1;
   height: 473.9px;
+ }
+
+ .offcanvas-body {
+  background-color: #33495F;
+ }
+
+ .offcanvas-header {
+  background-color: #33495fea;
  }
