@@ -1,4 +1,3 @@
-
 @keyframes opacityIn {
   from {
     opacity: 0;
@@ -12,7 +11,7 @@
 
 #details_city {
   font-weight: 500;
-  font-size: 3em;
+  font-size: 4em;
 
   animation: testOpa 1s;
 }
@@ -50,12 +49,16 @@ body {
     animation: testOpa 2s;
   }
 
-  
+  #humidity {
+    font-size: 30px;
+  }
+
+  #wind {
+    font-size: 30px;
+  }
+
 }
 
-#navBtn {
-  position: fixed;
-}
 
 #i-main {
   position: absolute;
@@ -98,7 +101,7 @@ body {
 
 .list-group-item {
 
-  animation: opacityIn 1.75s ;
+  animation: opacityIn 1.75s;
 
 }
 
@@ -108,7 +111,7 @@ body {
 
   #i-main {
     position: absolute;
-    top: 65%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -132,7 +135,10 @@ body {
     height: 473.9px;
   }
 
+
+
 }
+
 
 
 
